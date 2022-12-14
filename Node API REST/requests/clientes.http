@@ -1,0 +1,46 @@
+@api = http://localhost:3100/api/clientes
+
+
+###--------------------------------------------------------
+### C
+### Crear el registro de un clientes
+POST {{api}}/crearClientes
+Content-Type: application/json
+
+{
+    "nombre": "Andrea Soto"
+}
+
+
+###-----------------------------------------------------------
+### R - ejemplo simple
+### Obtener los datos de todos los clientes
+{{api}}/getClientes
+
+
+
+###------------------------------------------------------------
+### R - ejemplo con parametro
+### Obtener los datos de un cliente escogiendo el id
+{{api}}/getClientesById/4
+
+
+
+###-------------------------------------------------------------
+### U
+### update
+PUT http://localhost:3900/api/clientes/actualizarClientes/3
+Content-Type: application/json
+
+{
+    "nombre": "Francisco Brenes",
+    "cantidad" : 4
+}
+
+
+###--------------------------------------------------------------
+### D
+### delete product 
+DELETE {{api}}/borrarClientesById/4
+
+### R simple, R parametro, C, U, D
