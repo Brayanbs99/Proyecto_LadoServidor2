@@ -1,5 +1,5 @@
-import app from "./app"
+import app from "./app.js"
 
-app.listen(3000)
+app.listen(app.get("port"));
 
-console.log("API escuchando desde el puerto : ", 3000)
+console.log("Escuchando en el puerto : ", app.get("port"));
